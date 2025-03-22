@@ -1,0 +1,10 @@
+---
+- name: Restart SSHD Service
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Restart sshd service
+      service:
+        name: sshd
+        state: restarted
