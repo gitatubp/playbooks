@@ -1,0 +1,9 @@
+---
+- name: Restart chronyd service
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure chronyd is restarted
+      service:
+        name: chronyd
+        state: restarted
